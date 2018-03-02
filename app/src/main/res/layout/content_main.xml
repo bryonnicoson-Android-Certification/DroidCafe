@@ -37,6 +37,7 @@
             android:layout_width="123dp"
             android:layout_height="123dp"
             android:contentDescription="@string/donuts"
+            android:onClick="showDonutOrder"
             android:padding="@dimen/padding_regular"
             android:src="@drawable/donut_circle" />
 
@@ -61,6 +62,7 @@
             android:layout_width="123dp"
             android:layout_height="123dp"
             android:contentDescription="@string/ice_cream_sandwiches"
+            android:onClick="showIceCreamOrder"
             android:padding="@dimen/padding_regular"
             android:src="@drawable/icecream_circle" />
 
@@ -83,6 +85,7 @@
             android:layout_width="123dp"
             android:layout_height="123dp"
             android:contentDescription="@string/froyo"
+            android:onClick="showFroyoOrder"
             android:padding="@dimen/padding_regular"
             android:src="@drawable/froyo_circle" />
 
@@ -93,6 +96,6 @@
             android:text="@string/froyo"
             app:layout_constraintStart_toEndOf="@id/froyo"
             app:layout_constraintTop_toBottomOf="@id/ice_cream" />
-        
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
