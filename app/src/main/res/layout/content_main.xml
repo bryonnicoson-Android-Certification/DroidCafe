@@ -4,17 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/padding_regular"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.bryonnicoson.droidcafe.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/text_intro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="@dimen/padding_regular"
+        android:text="@string/intro_text"
+        android:textSize="@dimen/text_heading" />
 
+    <TextView
+        android:id="@+id/choose_desert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/choose_a_dessert"
+        app:layout_constraintTop_toBottomOf="@id/text_intro" />
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/choose_desert">
+
+        <ImageView
+            android:id="@+id/donut"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:contentDescription="@string/donuts"
+            android:padding="@dimen/padding_regular"
+            android:src="@drawable/donut_circle" />
+
+        <TextView
+            android:id="@+id/donut_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/donuts" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/row1">
+
+        <ImageView
+            android:id="@+id/ice_cream"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:contentDescription="@string/ice_cream_sandwiches"
+            android:padding="@dimen/padding_regular"
+            android:src="@drawable/icecream_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/ice_cream_sandwiches" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/row2">
+
+        <ImageView
+            android:id="@+id/froyo"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:contentDescription="@string/froyo"
+            android:padding="@dimen/padding_regular"
+            android:src="@drawable/froyo_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_wide"
+            android:text="@string/froyo"
+            app:layout_constraintStart_toEndOf="@id/froyo"
+            app:layout_constraintTop_toBottomOf="@id/ice_cream" />
+        
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
